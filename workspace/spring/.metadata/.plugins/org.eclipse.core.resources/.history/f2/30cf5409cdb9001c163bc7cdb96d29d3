@@ -1,0 +1,13 @@
+
+INSERT INTO user (id, first_name, last_name, role) VALUES
+  (1, 'Muneer', 'Malik', 'user');
+  INSERT INTO user (id, first_name, last_name, role) VALUES
+  (2, 'James', 'Connor', 'user');
+  
+  
+  
+ INSERT INTO phrase (id, mnemonic, password, inspiration, category, score) VALUES
+ (1, 'Four score and seven years ago, our Fathers', '4s&7yaoF', 'Quotation - Gettysburg Address', 'Quotation, 65);
+ 
+ 
+  

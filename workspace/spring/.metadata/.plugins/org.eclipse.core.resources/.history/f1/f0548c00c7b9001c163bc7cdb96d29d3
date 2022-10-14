@@ -1,0 +1,7 @@
+
+INSERT INTO user (id, first_name, last_name, role) VALUES
+  (1, 'Muneer', 'Malik', 'admin');
+  INSERT INTO user (id, first_name, last_name, role) VALUES
+  (2, 'Muneer', 'Malik', 'admin');
+  
+  

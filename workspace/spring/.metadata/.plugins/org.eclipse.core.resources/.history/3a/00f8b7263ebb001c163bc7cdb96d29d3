@@ -1,0 +1,44 @@
+
+INSERT INTO user (id, first_name, last_name, role) VALUES
+  (1, 'Muneer', 'Malik', 'user');
+  INSERT INTO user (id, first_name, last_name, role) VALUES
+  (2, 'James', 'Connor', 'user');
+  
+  
+  
+ INSERT INTO phrase (id, mnemonic, password, inspiration, score) VALUES
+ (1, 'Four score and seven years ago, our Fathers', '4s&7yaoF', 'Quotation - Gettysburg Address', 65, 4);
+ 
+ INSERT INTO phrase (id, mnemonic, password, inspiration, score) VALUES
+ (2, 'I love to ski at Seven Springs!', 'Ilts@7S!', 'Quotation - Gettysburg Address', 65, 4);
+ 
+ 
+  INSERT INTO phrase (id, mnemonic, password, inspiration, score) VALUES
+ (3, 'Alas, poor Y orick! I knew him, Horatio', 'A,pY!Ikh,H', 'Quotation - Gettysburg Address', 65, 4);
+ 
+ INSERT INTO category (id, name) VALUES
+ (1, 'advertising slogans');
+ 
+ INSERT INTO category (id, name) VALUES
+ (2, 'nursery rhymes and songs');
+ 
+ INSERT INTO category (id, name) VALUES
+ (3, 'movie quotes');
+ 
+ INSERT INTO category (id, name) VALUES
+ (4, 'famous quotations');
+ 
+ INSERT INTO category (id, name) VALUES
+ (5, 'song lyrics');
+ 
+ INSERT INTO category (id, name) VALUES
+ (6, 'theme song lyrics');
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

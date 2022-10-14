@@ -1,0 +1,29 @@
+/*
+DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS phrases;
+
+CREATE TABLE phrases (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  phrase VARCHAR(512) NOT NULL,
+  password VARCHAR(250) NOT NULL,
+  inspiration VARCHAR(512) DEFAULT NULL,
+  category VARCHAR(512) DEFAULT NULL
+  
+);
+
+
+CREATE TABLE user (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  first_name VARCHAR(250) NOT NULL,
+  last_name VARCHAR(250) NOT NULL,
+  role VARCHAR(250) DEFAULT NULL
+);
+
+CREATE TABLE user_phrases (
+	userID INT NOT NULL,
+	phraseID INT NOT NULL
+	
+);
+*/
+
+

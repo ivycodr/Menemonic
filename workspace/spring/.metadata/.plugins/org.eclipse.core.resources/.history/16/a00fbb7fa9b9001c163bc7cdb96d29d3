@@ -1,0 +1,5 @@
+package com.mnemonic.service;
+
+public class UserService {
+
+}

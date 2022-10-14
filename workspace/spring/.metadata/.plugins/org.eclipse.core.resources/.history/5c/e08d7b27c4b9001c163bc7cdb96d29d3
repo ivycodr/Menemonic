@@ -1,0 +1,29 @@
+package com.mnemonic.respositories;
+
+
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.stereotype.Repository;
+
+import com.mnemonic.entity.User;
+
+@Repository
+@Transactional
+@EntityScan( basePackages = {"com.mnemonic.entity.User"} ) 
+public class UserRepository{
+	
+	@PersistenceContext
+	@Autowired
+	EntityManager entityManager;
+
+	public User findById(int id) {
+		return entityManager.find(User.class, id);
+	}
+}

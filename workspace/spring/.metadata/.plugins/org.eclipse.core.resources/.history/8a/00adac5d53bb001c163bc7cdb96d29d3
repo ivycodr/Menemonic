@@ -1,0 +1,7 @@
+package com.mnemonic.service;
+
+public class CategoryService {
+	
+	private CategoryRepository categoryRepository;
+
+}

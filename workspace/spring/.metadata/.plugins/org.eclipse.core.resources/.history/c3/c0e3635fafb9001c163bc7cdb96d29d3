@@ -1,0 +1,18 @@
+package com.mnemonic.respositories;
+
+
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.mnemonic.entity.User;
+@Repository
+@Transactional
+public interface UserRepository extends CrudRepository<User, Long>{
+
+	List<User> findByLastName(String lastName);
+
+	User findById(long id);
+}

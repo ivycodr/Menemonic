@@ -1,0 +1,42 @@
+package com.mnemonic.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.mnemonic.entity.Category;
+import com.mnemonic.respositories.CategoryRepository;
+
+public class CategoryService {
+	
+	@Autowired
+	private CategoryRepository categoryRepository;
+	
+	
+	public Category findById(long id) {
+		return entityManager.find(Category.class, id);
+
+	}
+	
+	public Category findByName(String name) {
+		return entityManager.find(Category.class, name);
+
+	}
+	
+	public List<Category> getAllCategories() {
+		List allCategories =
+				entityManager.createQuery("SELECT c FROM Category c", Category.class).getResultList();
+		
+		
+		return allCategories;
+	}
+	
+	public int deleteById(long id) {
+		return entityManager.deleteById(id);
+
+	}
+	
+
+	
+
+}

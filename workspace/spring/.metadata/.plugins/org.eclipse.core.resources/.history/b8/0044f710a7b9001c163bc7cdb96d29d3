@@ -1,0 +1,6 @@
+package com.mnemonic.respositories;
+
+import org.springframework.data.repository.CrudRepository;
+public class UserRepository  extends CrudRepository<User, Long>{
+	
+}

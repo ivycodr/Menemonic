@@ -1,0 +1,86 @@
+package com.mnemonic.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "userphrase")
+public class UserPhrase {
+	/*
+	 *  id INT AUTO_INCREMENT  PRIMARY KEY,
+  		first_name VARCHAR(250) NOT NULL,
+  		last_name VARCHAR(250) NOT NULL,
+  		role VARCHAR(250) DEFAULT NULL
+	 */
+	
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="id")
+	private  long id;
+	
+	@Column(name="firstname")
+	private  String firstName;
+	
+	@Column(name="lastname")
+	private  String lastName;
+	
+	@Column(name="userid")
+	private  long userid;
+	
+	@Column(name="mnemonic")
+	private String mnemonic;
+	
+	@Column(name="password")
+	private String password;
+	
+	@Column(name="score")
+	private int score;
+	
+	@Column(name="score")
+	private int score;
+	
+	
+	protected UserPhrase() {
+		// default constructor 
+	}
+	
+	public UserPhrase(String firstName, String lastName, String role) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		
+	}
+	
+	
+	public long getId() {
+		return id;
+	}
+	
+	
+	
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
+	
+	
+
+}

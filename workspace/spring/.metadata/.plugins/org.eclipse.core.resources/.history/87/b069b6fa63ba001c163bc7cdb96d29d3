@@ -1,0 +1,21 @@
+package com.mnemonic.api;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.mnemonic.service.JWTService;
+
+@RestController
+@RequestMapping("api/basicAuth")
+public class ValidateUserController {
+	
+	@Autowired
+	JWTService jwtService;
+	
+	
+	@RequestMapping("validate")
+	public String userIsValid() {
+		return "{\"result\" : \"ok\"}";
+	}
+
+}

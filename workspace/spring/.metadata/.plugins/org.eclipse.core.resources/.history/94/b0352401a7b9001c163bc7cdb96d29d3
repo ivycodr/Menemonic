@@ -1,0 +1,5 @@
+package com.mnemonic.respositories;
+
+public class UserRepository  extends CrudRepository<User, Long>{
+	
+}

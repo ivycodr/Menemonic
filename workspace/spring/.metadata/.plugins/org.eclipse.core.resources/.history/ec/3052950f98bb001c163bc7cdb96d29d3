@@ -1,0 +1,78 @@
+package com.mnemonic.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "userphrase")
+public class UserPhrase {
+	/*
+	 *  id INT AUTO_INCREMENT  PRIMARY KEY,
+  		first_name VARCHAR(250) NOT NULL,
+  		last_name VARCHAR(250) NOT NULL,
+  		role VARCHAR(250) DEFAULT NULL
+	 */
+	
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="id")
+	private  long id;
+	
+	@Column(name="first_name")
+	private  String firstName;
+	
+	@Column(name="last_name")
+	private  String lastName;
+	
+	@Column(name="role")
+	private  String role;
+	
+	protected UserPhrase() {
+		// default constructor 
+	}
+	
+	public UserPhrase(String firstName, String lastName, String role) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.role = role;
+	}
+	
+	
+	public long getId() {
+		return id;
+	}
+	
+	
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
+	
+	
+
+}

@@ -1,0 +1,5 @@
+package com.mnemonic.config;
+
+public class CORSConfig {
+
+}

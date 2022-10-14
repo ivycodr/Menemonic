@@ -1,0 +1,8 @@
+package com.mnemonic.service;
+
+@Autowired
+private UserRepository userRepository;
+
+public class UserService {
+
+}

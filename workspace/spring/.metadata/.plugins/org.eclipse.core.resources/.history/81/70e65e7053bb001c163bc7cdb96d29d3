@@ -1,0 +1,12 @@
+package com.mnemonic.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.mnemonic.respositories.CategoryRepository;
+
+public class CategoryService {
+	
+	@Autowired
+	private CategoryRepository categoryRepository;
+
+}

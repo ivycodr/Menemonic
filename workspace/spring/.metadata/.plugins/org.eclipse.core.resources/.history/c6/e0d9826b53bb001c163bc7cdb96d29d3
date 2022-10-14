@@ -1,0 +1,52 @@
+package com.mnemonic.respositories;
+
+
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.mnemonic.entity.Category;
+
+
+@Repository
+@Transactional
+@EntityScan( basePackages = {"com.mnemonic.entity.Category"} ) 
+public interface CategoryRepository extends JpaRepository<Category, Long> {
+	
+	
+	public Category findById(long id) {
+		return entityManager.find(Category.class, id);
+
+	}
+	
+	public Category findByName(String name) {
+		return entityManager.find(Category.class, name);
+
+	}
+	
+	public List<Category> getAllCategories() {
+		List allCategories =
+				entityManager.createQuery("SELECT c FROM Category c", Category.class).getResultList();
+		
+		
+		return allCategories;
+	}
+	
+	public int deleteById(long id) {
+		return entityManager.deleteById(id);
+
+	}
+	
+
+	
+	
+}

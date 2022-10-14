@@ -1,0 +1,10 @@
+package com.mnemonic.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+@Autowired
+private UserRepository userRepository;
+
+public class UserService {
+
+}

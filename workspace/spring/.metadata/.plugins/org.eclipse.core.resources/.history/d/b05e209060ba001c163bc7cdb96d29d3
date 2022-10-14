@@ -1,0 +1,9 @@
+package com.mnemonic.service;
+
+@Service
+public class JWTService {
+	
+	
+	
+
+}

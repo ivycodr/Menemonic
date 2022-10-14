@@ -1,0 +1,22 @@
+package com.mnemonic.respositories;
+
+
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.mnemonic.entity.User;
+
+@Repository
+@Transactional
+public interface UserRepository extends CrudRepository<User, Long>{
+	
+	EntityManager entityManager;
+
+	User findById(long id);
+}
